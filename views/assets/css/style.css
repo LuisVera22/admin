@@ -1,0 +1,233 @@
+/***diseño de datatable personalizado***/
+table.table th,
+table.table td,
+.dataTables_info,
+.pagination {
+    font-size: 0.9rem !important;
+}
+
+.page-item.active .page-link {
+    background: transparent;
+    background-image: linear-gradient(310deg, #7928ca, #ff0080);
+    color: #fff;
+    border: none;
+    border-radius: 50% !important;
+}
+
+.page-link:focus {
+    box-shadow: none !important;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    padding-right: 1.8rem;
+}
+
+/***diseño del select2 personalizado**/
+.select2-dropdown {
+    z-index: 1055 !important;
+}
+
+.select2-container--default .select2-selection--single {
+    border-radius: 0.5rem !important;
+    padding: 0.5rem 0.75rem;
+    font-size: .875rem;
+    font-weight: 400;
+    /* background-color: #fff !important; */
+    background-clip: padding-box;
+    border: 1px solid #d2d6da !important;
+    appearance: none;
+    transition: box-shadow .15s ease, border-color .15s ease;
+}
+
+.select2-selection--single:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #e293d3;
+    outline: 0;
+    box-shadow: 0 0 0 2px #e9aede;
+}
+
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 100% !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 1.4rem !important;
+    color: #495057 !important;
+}
+
+.select2-dropdown,
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    border: 1px solid #d2d6da !important;
+    outline: 0;
+    font-size: .875rem;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #cb0c9f !important;
+}
+
+/***fin diseño del select2 personalizado**/
+/***cambiando el select2*/
+.select2-hidden-accessible {
+    /*width: 100% !important;*/
+    width: 50% !important;
+    height: 33px !important;
+    font-size: 13px !important;
+}
+
+.card-primary.card-outline {
+    border-top: 3px solid #cb0c9f;
+}
+
+.card-primary.card-outline .card-header {
+    padding: 0%;
+}
+
+.btn.btn-tool {
+    font-family: Open Sans;
+    color: #344767;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .125) !important;
+}
+
+.btn.btn-tool:hover {
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.input-group-addon {
+    padding: 8px 8px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid #ced4da;
+    background-color: #e9ecef;
+    color: #495057;
+    border-radius: 3px;
+    min-width: 36px;
+}
+
+.datepicker {
+    box-shadow: 0 8px 26px -4px hsla(0, 0%, 8%, .15), 0 8px 9px -5px hsla(0, 0%, 8%, .06) !important;
+}
+
+.datepicker-switch {
+    color: #cb0c9f !important;
+}
+
+.datepicker table tr td.active.active {
+    background-color: #cb0c9f !important;
+    border-color: #cb0c9f !important;
+}
+
+.datepicker table tr td.today {
+    background-color: #cb0c9f54 !important;
+    border-color: #cb0c9f !important;
+}
+
+/*diseño para lo numeros quitando las flechas*/
+.cajaNumerico {
+    -moz-appearance: textfield;
+}
+
+.cajaNumerico::-webkit-inner-spin-button {
+    display: none;
+}
+
+.navbar-vertical.navbar-expand-xs .navbar-collapse {
+    overflow: hidden;
+}
+
+.navbar-vertical.navbar-expand-xs {
+    overflow-x: hidden;
+}
+
+.style_laboratorio strong {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f3d8ed; /* Cambia este color al que prefieras */
+}
+
+.delete-row,.update-row{
+    padding: 0.5rem 0.8rem;
+}
+
+#navbarBlur{
+    position: fixed;
+    background-color: #e9ecef;
+    z-index: 1;
+    right: 0;
+    left: 0;    
+    transition: box-shadow .25s ease-in, background-color .25s ease-in;;
+}
+
+@media (min-width: 1200px) {
+    #navbarBlur {
+        margin-left: 17.125rem; /* Puedes ajustar el valor según sea necesario */
+    }
+}
+@media (max-width: 1200px) {
+    #navbarBlur {
+        margin-left: 0; /* Puedes ajustar el valor según sea necesario */
+    }
+}
+section.container-fluid{
+    padding-top: 5.5rem!important;
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente */
+}
+
+.loading-image {
+    width: 10%;
+    z-index: 10000;
+}
+
+.dataTables_filter{
+    display: none;
+}
+
+.icon{
+    color: #344767!important;
+}
+
+/*inicio: estilo excel*/
+.btn-excel,.btn-excel:hover
+{
+    color: #fff;
+    background-color: green;
+    border-color: green;
+}
+/*fin: estilo excel*/
+
+/*inicio: pagina scroll*/
+::-webkit-scrollbar-thumb {
+    background-color: #777;
+    border-radius: 50rem;
+    border-left: 2px solid #f5f5f5;
+}
+/*fin: pagina scroll*/
+

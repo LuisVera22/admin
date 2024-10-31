@@ -1,0 +1,650 @@
+[
+    {
+        "id": "+0.00",
+        "descripcion": "+0.00"
+    },
+    {
+        "id": "+0.25",
+        "descripcion": "+0.25"
+    },
+    {
+        "id": "+0.50",
+        "descripcion": "+0.50"
+    },
+    {
+        "id": "+0.75",
+        "descripcion": "+0.75"
+    },
+    {
+        "id": "+1.00",
+        "descripcion": "+1.00"
+    },
+    {
+        "id": "+1.25",
+        "descripcion": "+1.25"
+    },
+    {
+        "id": "+1.50",
+        "descripcion": "+1.50"
+    },
+    {
+        "id": "+1.75",
+        "descripcion": "+1.75"
+    },
+    {
+        "id": "+2.00",
+        "descripcion": "+2.00"
+    },
+    {
+        "id": "+2.25",
+        "descripcion": "+2.25"
+    },
+    {
+        "id": "+2.50",
+        "descripcion": "+2.50"
+    },
+    {
+        "id": "+2.75",
+        "descripcion": "+2.75"
+    },
+    {
+        "id": "+3.00",
+        "descripcion": "+3.00"
+    },
+    {
+        "id": "+3.25",
+        "descripcion": "+3.25"
+    },
+    {
+        "id": "+3.50",
+        "descripcion": "+3.50"
+    },
+    {
+        "id": "+3.75",
+        "descripcion": "+3.75"
+    },
+    {
+        "id": "+4.00",
+        "descripcion": "+4.00"
+    },
+    {
+        "id": "+4.25",
+        "descripcion": "+4.25"
+    },
+    {
+        "id": "+4.50",
+        "descripcion": "+4.50"
+    },
+    {
+        "id": "+4.75",
+        "descripcion": "+4.75"
+    },
+    {
+        "id": "+5.00",
+        "descripcion": "+5.00"
+    },
+    {
+        "id": "+5.25",
+        "descripcion": "+5.25"
+    },
+    {
+        "id": "+5.50",
+        "descripcion": "+5.50"
+    },
+    {
+        "id": "+5.75",
+        "descripcion": "+5.75"
+    },
+    {
+        "id": "+6.00",
+        "descripcion": "+6.00"
+    },
+    {
+        "id": "+6.25",
+        "descripcion": "+6.25"
+    },
+    {
+        "id": "+6.50",
+        "descripcion": "+6.50"
+    },
+    {
+        "id": "+6.75",
+        "descripcion": "+6.75"
+    },
+    {
+        "id": "+7.00",
+        "descripcion": "+7.00"
+    },
+    {
+        "id": "+7.25",
+        "descripcion": "+7.25"
+    },
+    {
+        "id": "+7.50",
+        "descripcion": "+7.50"
+    },
+    {
+        "id": "+7.75",
+        "descripcion": "+7.75"
+    },
+    {
+        "id": "+8.00",
+        "descripcion": "+8.00"
+    },
+    {
+        "id": "+8.25",
+        "descripcion": "+8.25"
+    },
+    {
+        "id": "+8.50",
+        "descripcion": "+8.50"
+    },
+    {
+        "id": "+8.75",
+        "descripcion": "+8.75"
+    },
+    {
+        "id": "+9.00",
+        "descripcion": "+9.00"
+    },
+    {
+        "id": "+9.25",
+        "descripcion": "+9.25"
+    },
+    {
+        "id": "+9.50",
+        "descripcion": "+9.50"
+    },
+    {
+        "id": "+9.75",
+        "descripcion": "+9.75"
+    },
+    {
+        "id": "+10.00",
+        "descripcion": "+10.00"
+    },
+    {
+        "id": "+10.25",
+        "descripcion": "+10.25"
+    },
+    {
+        "id": "+10.50",
+        "descripcion": "+10.50"
+    },
+    {
+        "id": "+10.75",
+        "descripcion": "+10.75"
+    },
+    {
+        "id": "+11.00",
+        "descripcion": "+11.00"
+    },
+    {
+        "id": "+11.25",
+        "descripcion": "+11.25"
+    },
+    {
+        "id": "+11.50",
+        "descripcion": "+11.50"
+    },
+    {
+        "id": "+11.75",
+        "descripcion": "+11.75"
+    },
+    {
+        "id": "+12.00",
+        "descripcion": "+12.00"
+    },
+    {
+        "id": "+12.25",
+        "descripcion": "+12.25"
+    },
+    {
+        "id": "+12.50",
+        "descripcion": "+12.50"
+    },
+    {
+        "id": "+12.75",
+        "descripcion": "+12.75"
+    },
+    {
+        "id": "+13.00",
+        "descripcion": "+13.00"
+    },
+    {
+        "id": "+13.25",
+        "descripcion": "+13.25"
+    },
+    {
+        "id": "+13.50",
+        "descripcion": "+13.50"
+    },
+    {
+        "id": "+13.75",
+        "descripcion": "+13.75"
+    },
+    {
+        "id": "+14.00",
+        "descripcion": "+14.00"
+    },
+    {
+        "id": "+14.25",
+        "descripcion": "+14.25"
+    },
+    {
+        "id": "+14.50",
+        "descripcion": "+14.50"
+    },
+    {
+        "id": "+14.75",
+        "descripcion": "+14.75"
+    },
+    {
+        "id": "+15.00",
+        "descripcion": "+15.00"
+    },
+    {
+        "id": "+15.25",
+        "descripcion": "+15.25"
+    },
+    {
+        "id": "+15.50",
+        "descripcion": "+15.50"
+    },
+    {
+        "id": "+15.75",
+        "descripcion": "+15.75"
+    },
+    {
+        "id": "+16.00",
+        "descripcion": "+16.00"
+    },
+    {
+        "id": "+16.25",
+        "descripcion": "+16.25"
+    },
+    {
+        "id": "+16.50",
+        "descripcion": "+16.50"
+    },
+    {
+        "id": "+16.75",
+        "descripcion": "+16.75"
+    },
+    {
+        "id": "+17.00",
+        "descripcion": "+17.00"
+    },
+    {
+        "id": "+17.25",
+        "descripcion": "+17.25"
+    },
+    {
+        "id": "+17.50",
+        "descripcion": "+17.50"
+    },
+    {
+        "id": "+17.75",
+        "descripcion": "+17.75"
+    },
+    {
+        "id": "+18.00",
+        "descripcion": "+18.00"
+    },
+    {
+        "id": "+18.25",
+        "descripcion": "+18.25"
+    },
+    {
+        "id": "+18.50",
+        "descripcion": "+18.50"
+    },
+    {
+        "id": "+18.75",
+        "descripcion": "+18.75"
+    },
+    {
+        "id": "+19.00",
+        "descripcion": "+19.00"
+    },
+    {
+        "id": "+19.25",
+        "descripcion": "+19.25"
+    },
+    {
+        "id": "+19.50",
+        "descripcion": "+19.50"
+    },
+    {
+        "id": "+19.75",
+        "descripcion": "+19.75"
+    },
+    {
+        "id": "+20.00",
+        "descripcion": "+20.00"
+    },
+    {
+        "id": "-0.00",
+        "descripcion": "-0.00"
+    },
+    {
+        "id": "-0.25",
+        "descripcion": "-0.25"
+    },
+    {
+        "id": "-0.50",
+        "descripcion": "-0.50"
+    },
+    {
+        "id": "-0.75",
+        "descripcion": "-0.75"
+    },
+    {
+        "id": "-1.00",
+        "descripcion": "-1.00"
+    },
+    {
+        "id": "-1.25",
+        "descripcion": "-1.25"
+    },
+    {
+        "id": "-1.50",
+        "descripcion": "-1.50"
+    },
+    {
+        "id": "-1.75",
+        "descripcion": "-1.75"
+    },
+    {
+        "id": "-2.00",
+        "descripcion": "-2.00"
+    },
+    {
+        "id": "-2.25",
+        "descripcion": "-2.25"
+    },
+    {
+        "id": "-2.50",
+        "descripcion": "-2.50"
+    },
+    {
+        "id": "-2.75",
+        "descripcion": "-2.75"
+    },
+    {
+        "id": "-3.00",
+        "descripcion": "-3.00"
+    },
+    {
+        "id": "-3.25",
+        "descripcion": "-3.25"
+    },
+    {
+        "id": "-3.50",
+        "descripcion": "-3.50"
+    },
+    {
+        "id": "-3.75",
+        "descripcion": "-3.75"
+    },
+    {
+        "id": "-4.00",
+        "descripcion": "-4.00"
+    },
+    {
+        "id": "-4.25",
+        "descripcion": "-4.25"
+    },
+    {
+        "id": "-4.50",
+        "descripcion": "-4.50"
+    },
+    {
+        "id": "-4.75",
+        "descripcion": "-4.75"
+    },
+    {
+        "id": "-5.00",
+        "descripcion": "-5.00"
+    },
+    {
+        "id": "-5.25",
+        "descripcion": "-5.25"
+    },
+    {
+        "id": "-5.50",
+        "descripcion": "-5.50"
+    },
+    {
+        "id": "-5.75",
+        "descripcion": "-5.75"
+    },
+    {
+        "id": "-6.00",
+        "descripcion": "-6.00"
+    },
+    {
+        "id": "-6.25",
+        "descripcion": "-6.25"
+    },
+    {
+        "id": "-6.50",
+        "descripcion": "-6.50"
+    },
+    {
+        "id": "-6.75",
+        "descripcion": "-6.75"
+    },
+    {
+        "id": "-7.00",
+        "descripcion": "-7.00"
+    },
+    {
+        "id": "-7.25",
+        "descripcion": "-7.25"
+    },
+    {
+        "id": "-7.50",
+        "descripcion": "-7.50"
+    },
+    {
+        "id": "-7.75",
+        "descripcion": "-7.75"
+    },
+    {
+        "id": "-8.00",
+        "descripcion": "-8.00"
+    },
+    {
+        "id": "-8.25",
+        "descripcion": "-8.25"
+    },
+    {
+        "id": "-8.50",
+        "descripcion": "-8.50"
+    },
+    {
+        "id": "-8.75",
+        "descripcion": "-8.75"
+    },
+    {
+        "id": "-9.00",
+        "descripcion": "-9.00"
+    },
+    {
+        "id": "-9.25",
+        "descripcion": "-9.25"
+    },
+    {
+        "id": "-9.50",
+        "descripcion": "-9.50"
+    },
+    {
+        "id": "-9.75",
+        "descripcion": "-9.75"
+    },
+    {
+        "id": "-10.00",
+        "descripcion": "-10.00"
+    },
+    {
+        "id": "-10.25",
+        "descripcion": "-10.25"
+    },
+    {
+        "id": "-10.50",
+        "descripcion": "-10.50"
+    },
+    {
+        "id": "-10.75",
+        "descripcion": "-10.75"
+    },
+    {
+        "id": "-11.00",
+        "descripcion": "-11.00"
+    },
+    {
+        "id": "-11.25",
+        "descripcion": "-11.25"
+    },
+    {
+        "id": "-11.50",
+        "descripcion": "-11.50"
+    },
+    {
+        "id": "-11.75",
+        "descripcion": "-11.75"
+    },
+    {
+        "id": "-12.00",
+        "descripcion": "-12.00"
+    },
+    {
+        "id": "-12.25",
+        "descripcion": "-12.25"
+    },
+    {
+        "id": "-12.50",
+        "descripcion": "-12.50"
+    },
+    {
+        "id": "-12.75",
+        "descripcion": "-12.75"
+    },
+    {
+        "id": "-13.00",
+        "descripcion": "-13.00"
+    },
+    {
+        "id": "-13.25",
+        "descripcion": "-13.25"
+    },
+    {
+        "id": "-13.50",
+        "descripcion": "-13.50"
+    },
+    {
+        "id": "-13.75",
+        "descripcion": "-13.75"
+    },
+    {
+        "id": "-14.00",
+        "descripcion": "-14.00"
+    },
+    {
+        "id": "-14.25",
+        "descripcion": "-14.25"
+    },
+    {
+        "id": "-14.50",
+        "descripcion": "-14.50"
+    },
+    {
+        "id": "-14.75",
+        "descripcion": "-14.75"
+    },
+    {
+        "id": "-15.00",
+        "descripcion": "-15.00"
+    },
+    {
+        "id": "-15.25",
+        "descripcion": "-15.25"
+    },
+    {
+        "id": "-15.50",
+        "descripcion": "-15.50"
+    },
+    {
+        "id": "-15.75",
+        "descripcion": "-15.75"
+    },
+    {
+        "id": "-16.00",
+        "descripcion": "-16.00"
+    },
+    {
+        "id": "-16.25",
+        "descripcion": "-16.25"
+    },
+    {
+        "id": "-16.50",
+        "descripcion": "-16.50"
+    },
+    {
+        "id": "-16.75",
+        "descripcion": "-16.75"
+    },
+    {
+        "id": "-17.00",
+        "descripcion": "-17.00"
+    },
+    {
+        "id": "-17.25",
+        "descripcion": "-17.25"
+    },
+    {
+        "id": "-17.50",
+        "descripcion": "-17.50"
+    },
+    {
+        "id": "-17.75",
+        "descripcion": "-17.75"
+    },
+    {
+        "id": "-18.00",
+        "descripcion": "-18.00"
+    },
+    {
+        "id": "-18.25",
+        "descripcion": "-18.25"
+    },
+    {
+        "id": "-18.50",
+        "descripcion": "-18.50"
+    },
+    {
+        "id": "-18.75",
+        "descripcion": "-18.75"
+    },
+    {
+        "id": "-19.00",
+        "descripcion": "-19.00"
+    },
+    {
+        "id": "-19.25",
+        "descripcion": "-19.25"
+    },
+    {
+        "id": "-19.50",
+        "descripcion": "-19.50"
+    },
+    {
+        "id": "-19.75",
+        "descripcion": "-19.75"
+    },
+    {
+        "id": "-20.00",
+        "descripcion": "-20.00"
+    }
+]

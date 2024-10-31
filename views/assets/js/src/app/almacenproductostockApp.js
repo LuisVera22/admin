@@ -1,0 +1,4 @@
+const almacenproductostockModel = new AlmacenproductostockModel();
+const almacenproductostockController = new AlmacenproductostockController(almacenproductostockModel);
+const almacenproductostockView = new AlmacenproductostockView(almacenproductostockController);
+almacenproductostockController.view = almacenproductostockView;

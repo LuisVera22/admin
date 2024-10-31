@@ -1,0 +1,5 @@
+const reposicionfabricacionModel = new ReposicionFabricacionModel();
+const reposicionfabricacionController = new ReposicionFabricacionController(reposicionfabricacionModel);
+const reposicionfabricacionView = new ReposicionFabricacionView(reposicionfabricacionController);
+selectManufactxProductoFabDig('frmRegistrarReposicionDigital',reposicionfabricacionController);
+selectManufactxProductoFabConv('frmRegistrarReposicionConvencional',reposicionfabricacionController);

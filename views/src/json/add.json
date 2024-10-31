@@ -1,0 +1,62 @@
+[
+    {
+        "id": "+0.50",
+        "descripcion": "+0.50"
+    },
+    {
+        "id": "+0.75",
+        "descripcion": "+0.75"
+    },
+    {
+        "id": "+1.00",
+        "descripcion": "+1.00"
+    },
+    {
+        "id": "+1.25",
+        "descripcion": "+1.25"
+    },
+    {
+        "id": "+1.50",
+        "descripcion": "+1.50"
+    },
+    {
+        "id": "+1.75",
+        "descripcion": "+1.75"
+    },
+    {
+        "id": "+2.00",
+        "descripcion": "+2.00"
+    },
+    {
+        "id": "+2.25",
+        "descripcion": "+2.25"
+    },
+    {
+        "id": "+2.50",
+        "descripcion": "+2.50"
+    },
+    {
+        "id": "+2.75",
+        "descripcion": "+2.75"
+    },
+    {
+        "id": "+3.00",
+        "descripcion": "+3.00"
+    },
+    {
+        "id": "+3.25",
+        "descripcion": "+3.25"
+    },
+    {
+        "id": "+3.50",
+        "descripcion": "+3.50"
+    },
+    {
+        "id": "+3.75",
+        "descripcion": "+3.75"
+    },
+    {
+        "id": "+4.00",
+        "descripcion": "+4.00"
+    }
+]

@@ -1,0 +1,89 @@
+class OrdentrabajoView {
+    constructor(controller) {
+        this.controller = controller;
+
+        this.changeCliente();
+        this.onclickAgregarItem();
+        this.onclickViewCuotas();
+        this.onselectTablaServicio();
+        this.onclickAgregarCuota();
+        this.onclickRetroceder();
+        this.changeSaldo();
+        this.onclickCrearOrdenTrabajo();
+        this.onclickAlturas();
+        this.onclickDips();
+        this.onclickDiametros();
+        this.onclickTablaProductos();
+        this.onclickBtnEliminarItems();
+        this.onclickBtnEliminarItemsCuotas();
+        this.seeUpdateSecondTable();
+        this.seeUpdateSecondTableCuotas();
+        this.onclickBtnActualizarProducto();
+        this.viewDataIdSecondTable();
+        this.freezingCampos();
+        this.onseeCompleteCampos();
+    }
+    viewDataIdSecondTable()
+    {
+        this.controller.generarIdentificadorUnico();
+    }
+    changeCliente() {
+        this.controller.mostrandodataCliente();
+    }
+    onclickAgregarItem() {
+        this.controller.mostrandoManufacturacion();
+    }
+    onclickViewCuotas() {
+        this.controller.mostrandoCuotas();
+    }
+    onselectTablaServicio() {
+        this.controller.tablaServicios();
+    }    
+    onclickAgregarCuota(){
+        this.controller.tablaCuotas();
+    }
+    onclickRetroceder(){
+        this.controller.btnBack();
+    }
+    changeSaldo(){
+        this.controller.calcularSaldo();
+    }
+    onclickCrearOrdenTrabajo(){
+        this.controller.onCreateOrdenTrabajoFormSubmit()
+    }
+    onclickAlturas(){
+        this.controller.mostrandoAlturas();
+    }
+    onclickDips(){
+        this.controller.mostrandoDips();
+    }
+    onclickDiametros(){
+        this.controller.mostrandoDiametros();
+    }
+    onclickTablaProductos(){
+        this.controller.tablaProductos();
+    }
+    onclickBtnEliminarItems(){
+        this.controller.eliminarItems();
+    }
+    onclickBtnEliminarItemsCuotas(){
+        this.controller.eliminarItemsCuotas();
+    }
+    onclickBtnActualizarProducto(){
+        this.controller.actualizarItemProducto();
+    }
+    seeUpdateSecondTable(){
+        this.controller.updateSecondTable();
+    }
+    seeUpdateSecondTableCuotas(){
+        this.controller.updateSecondTableCuotas();
+    }
+    freezingCampos()
+    {
+        this.controller.bloqueCampos();
+    }
+    onseeCompleteCampos()
+    {
+        this.controller.seleccionarProducto();
+    }
+}

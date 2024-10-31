@@ -1,0 +1,5 @@
+const almacenfabricacionModel = new AlmacenFabricacionModel();
+const almacenfabricacionController = new AlmacenFabricacionController(almacenfabricacionModel);
+const almacenfabricacionView = new AlmacenFabricacionView(almacenfabricacionController);
+selectManufactxProductoFabDig('frmRegistrarAlmacenFabricacionDig',almacenfabricacionController);
+selectManufactxProductoFabConv('frmRegistrarAlmacenFabricacionConv',almacenfabricacionController);

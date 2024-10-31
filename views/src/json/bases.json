@@ -1,0 +1,60 @@
+{
+    "data": [
+        {
+            "id": "0.00",
+            "descripcion": "0.00"
+        },
+        {
+            "id": "0.50",
+            "descripcion": "0.50"
+        },
+        {
+            "id": "1.00",
+            "descripcion": "1.00"
+        },
+        {
+            "id": "2.00",
+            "descripcion": "2.00"
+        },
+        {
+            "id": "3.00",
+            "descripcion": "3.00"
+        },
+        {
+            "id": "4.00",
+            "descripcion": "4.00"
+        },
+        {
+            "id": "5.00",
+            "descripcion": "5.00"
+        },
+        {
+            "id": "6.00",
+            "descripcion": "6.00"
+        },
+        {
+            "id": "7.00",
+            "descripcion": "7.00"
+        },
+        {
+            "id": "8.00",
+            "descripcion": "8.00"
+        },
+        {
+            "id": "10.00",
+            "descripcion": "10.00"
+        },
+        {
+            "id": "12.00",
+            "descripcion": "12.00"
+        },
+        {
+            "id": "14.00",
+            "descripcion": "14.00"
+        },
+        {
+            "id": "16.00",
+            "descripcion": "16.00"
+        }
+    ]
+}
