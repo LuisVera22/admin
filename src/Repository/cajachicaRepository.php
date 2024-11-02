@@ -15,7 +15,7 @@ class CajachicaRepository implements CajachicaInterface
         return CajachicaModel::getCajachicaId($param);
     }
 
-    static public function guardarCajachica(CajachicaModel $cajachica)
+    static public function guardarCajachica(CajachicaModel $cajachica, $file)
     {
         return $cajachica->postCajachica();
     }

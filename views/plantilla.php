@@ -54,6 +54,8 @@ if (isset($_SESSION['token'])) {
 	if (isset($ruta)) {
 		if (
 			$ruta == "login" ||
+			
+			$_GET['ruta'] == "caja-chica" ||
 			$ruta == "cambiar-contraseña"
 		) {
 			include_once "views/modulos/" . $ruta . ".php";

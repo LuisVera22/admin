@@ -9,8 +9,8 @@ class CajachicaController
         return CajachicaRepository::mostrarIdCajachica($param);
     }
 
-    static public function guardarCajaChica(CajachicaModel $cajachica){
-        return  CajachicaRepository::guardarCajachica($cajachica);
+    static public function guardarCajaChica(CajachicaModel $cajachica, $file){
+        return  CajachicaRepository::guardarCajachica($cajachica, $file);
     }
 
     static public function actualizarCajachica(CajachicaModel $cajachica){

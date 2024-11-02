@@ -7,79 +7,81 @@ require_once '../../config/enviroment.php';
 class CajachicaAjax
 {
     public function ajaxCrudCajachica() {
-        $response = array('responseJson' => 'error', 'message' => 'Operación no válida');
+        if(isset($_POST['crud']) && $_POST['crud'] == "create") {
+            if (!empty($_POST['textDescription']) && !empty($_POST['amount']) && !empty($_FILES['imgCajachica']['name'])) {
+                $descripcion = $_POST['textDescription'];
+                $monto = $_POST['amount'];
+                $file = $_FILES['imgCajachica'];
+                $mimetype = $file['type'];
 
-        if (isset($_POST['crud'])) {
-            $crudType = $_POST['crud'];
-
-            switch ($crudType) {
-                case 'create':
-                    /*Crear un nuevo registro de caja chica*/
-                    $description = $_POST['description'] ?? null;
-                    $amount = $_POST['amount'] ?? null;
-                    $username = $_POST['username'] ?? null;
-                    $img_petty_cash_name = $_POST['img_petty_cash_name'] ?? null;
-
-                    if ($description && $amount && $username && $img_petty_cash_name) {
-                        $cajachica = new CajachicaModel(null, null,null, $description, $amount, $username, $img_petty_cash_name);
-                        $response = CajachicaController::guardarCajaChica($cajachica);
-                    } else {
-                        $response['message'] = 'Todos los campos son obligatorios';
-                    }
-                    break;
-
-                case 'update':
-                    /*Actualizar un registro de caja chica existente*/
-                    $id = $_POST['id'] ?? null;
-                    $description = $_POST['description'] ?? null;
-                    $amount = $_POST['amount'] ?? null;
-                    $username = $_POST['username'] ?? null;
-                    $img_petty_cash_name = $_POST['img_petty_cash_name'] ?? null;
-
-                    if ($id && $description && $amount && $username) {
-                        $cajachica = new CajachicaModel($id, null,null, $description, $amount, $username, $img_petty_cash_name);
-                        $response = CajachicaController::actualizarCajachica($cajachica);
-                    } else {
-                        $response['message'] = 'Todos los campos excepto la imagen son obligatorios';
-                    }
-                    break;
-
-                case 'getIdInfo':
-                    /*Obtener información detallada de un registro específico de caja chica*/
-                    $param = $_POST['param'] ?? null;
-                    if ($param) {
-                        $id = Openssl::desencriptar($param, $_ENV['SECRET_KEY']);
-                        $response = CajachicaController::mostrarIdCajaChica($id);
-                    } else {
-                        $response['message'] = 'ID no proporcionado';
-                    }
-                    break;
-
-                case 'delete':
-                    /*Eliminar un registro específico de caja chica*/
-                    $param = $_POST['param'] ?? null;
-                    if ($param) {
-                        $id = Openssl::desencriptar($param, $_ENV['SECRET_KEY']);
-                        $response = CajachicaController::eliminarCajachica($id);
-                    } else {
-                        $response['message'] = 'ID no proporcionado';
-                    }
-                    break;
-
-                case 'getCajachica':
-                    /*Listar todos los registros de caja chica*/
-                    $response = CajachicaController::mostrarCajachica();
-                    break;
-
-                default:
-                    $response['message'] = 'Operación no reconocida';
-                    break;
+                if($mimetype == 'image/jpg' || $mimetype == 'image/jpeg' || $mimetype == 'image/png'){
+                    $response = CajachicaController::guardarCajaChica();
+                } else {
+                    $response = array('reponseJson' => 'no imagen');
+                }
             }
+        } else if (isset($_POST['crud']) && $_POST['crud'] == "update") {
+            
+        } else if (isset($_POST['crud']) && $_POST['crud'] == "listId") {
+            $param = Openssl::desencriptar($_POST['param'], $_ENV['SECRET_KEY']);
+            $respCajachica = CajachicaController::mostrarIdCajachica($param);
+            if(!isset($respCajachica)){
+                $response = array('responseJson'=>"no server");
+            } else {
+                if ($respCajachica['status']) {
+                    $response = array(
+                        "id"            => Openssl::encriptar($respCajachica['data']['id'], $_ENV['SECRET_KEY']),
+                        "date"          => $respCajachica['data']['date'],
+                        "time"          => $respCajachica['data']['time'],
+                        "description"   => $respCajachica['data']['description'],
+                        "amount"        => $respCajachica['data']['amount'],
+                        "username"      => $respCajachica['data']['username'],
+                        "img_petty_cash_name" => $respCajachica['data']['img_petty_cash_name']
+                    );
+                } else {
+                    $response = $respCajachica;
+                }
+            }
+        } else if (isset($_POST['crud']) && $_POST['crud'] == "getIdInfo") {
+            $param = Openssl::desencriptar($_POST['param'], $_ENV['SECRET_KEY']);
+            $respCajachica = CajachicaController::mostrarIdCajachica($param);
+            if(!isset($respCajachica)){
+                $response = array('responseJson'=>"no server");
+            } else {
+                if ($respCajachica['status']) {
+                    $response = array(
+                        "id"            => Openssl::encriptar($respCajachica['data']['id'], $_ENV['SECRET_KEY']),
+                        "date"          => $respCajachica['data']['date'],
+                        "time"          => $respCajachica['data']['time'],
+                        "description"   => $respCajachica['data']['description'],
+                        "amount"        => $respCajachica['data']['amount'],
+                        "username"      => $respCajachica['data']['username'],
+                        "img_petty_cash_name" => $respCajachica['data']['img_petty_cash_name']
+                    );
+                } else {
+                    $response = $respCajachica;
+                }
+            }
+        } else if (isset($_POST['crud']) && $_POST['crud'] == "delete") {
+            $param = Openssl::desencriptar($_POST['param'], $_ENV['SECRET_KEY']);
+            $respCajachica = CajachicaController::eliminarCajachica($param);
+            if(!isset($respCajachica)) {
+                $response = array('responseJson' => "no server");
+            } else {
+                if (isset($respCajachica['message'])) {
+                    $response = $respCajachica;
+                } else {
+                    $response = $respCajachica;
+                }
+            }
+        } else if (isset($_POST['crud']) && $_POST['crud'] == 'getCajachica') {
+            $response = CajachicaController::mostrarCajachica();
+        } else {
+            $response = array('responseJson' => "error");
         }
-
         echo json_encode($response);
     }
 }
 
 $resp = new CajachicaAjax();
-$resp->ajaxCrudCajachica();
+$resp->ajaxCrudCajachica(); 

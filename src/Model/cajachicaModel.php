@@ -8,19 +8,13 @@ class CajachicaModel
     private $date;
     private $time;
     private $description;
-    private $amount;    
-    private $username;
+    private $amount;
     private $img_petty_cash_name;
 
-
-    function __construct($id=null,$date=null,$time=null,$description,$amount,$username=null,$img_petty_cash_name)
-    {
-        $this->id           = $id;
-        $this->date         = $date;
-        $this->time         = $time;
-        $this->description  = $description;
-        $this->amount       = $amount;
-        $this->username     = $username;
+    public function __construct($id = null, $description = null, $amount = null, $img_petty_cash_name = null) {
+        $this->id = $id;
+        $this->description = $description;
+        $this->amount = $amount;
         $this->img_petty_cash_name = $img_petty_cash_name;
     }
 

@@ -8,14 +8,12 @@ class listAjaxCajachica
 {
     public function listCajachica()
     {
-        /*Llamar al método para obtener los registros de Cajachica*/
         $response = CajachicaController::mostrarCajachica();
 
-        /*Verificar si se obtuvieron registros correctamente*/
         if ($response && is_array($response)) {
+
             for ($i = 0; $i < count($response); $i++) {
                 
-                /* Encriptar el id de cada registro*/
                 $encript = Openssl::encriptar($response[$i]['id'], $_ENV['SECRET_KEY']);
 
                 /*Preparar el array para mostrar los campos*/

@@ -2,7 +2,7 @@ class CajachicaView{
     constructor(controller){
         this.controller = controller;
         this.formRegistrarCajachica = $('#frmRegistrarCajachica');
-        this.formActualizarCajachica = $('#formActualizarCajachica');
+        this.formActualizarCajachica = $('#frmActualizarCajachica');
 
         this.formRegistrarCajachica.submit((e)=>{
             e.preventDefault();

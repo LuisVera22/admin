@@ -73,7 +73,7 @@ class EmpresaAjax
                 $response = EmpresaController::actualizarImagen($desencriptar, $file);
             } else {
                 $response = array('responseJson' => 'no imagen');
-            }
+            }       
         } else {
             $response = array('responseJson' => "error");
         }

@@ -310,6 +310,12 @@ class CajachicaController {
                     } else {
                         $("#info-modal #textUsuario").html(e.username);
                     }
+
+                    if (e.img_petty_cash_name == "" || e.img_petty_cash_name == null) {
+                        $("#info-modal #imgCajachica").html("--------");
+                    } else {
+                        $("#info-modal #imgCajachica").html(e.img_petty_cash_name);
+                    }
                 } else {
                     if (e.errors[0] == "No se pudo conectar a la base de datos") {
                         Swal.fire({
