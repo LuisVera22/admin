@@ -2,7 +2,33 @@
     <div class="pb-3">
         <h4>Caja Chica</h4>
     </div>
-    
+    <div class="card card-primary card-outline collapse-card" style="overflow: hidden;">
+        <div class="card-header">
+            <h5 class="mb-0">
+                <button type="button" class="btn btn-tool mb-0" data-bs-toggle="collapse" data-bs-target="#collapseFiltro" aria-expanded="false" aria-controls="collapseFiltro" style="display: flex;width: 100%;    padding: 0.75rem 1.25rem;">
+                    <div class="me-2"><i class="fas fa-filter"></i></div>
+                    <div style="width: 100%;text-align:left;">Filtrar</div>
+                    <div id="iconContainer"><i class="fas fa-plus"></i></div>
+                </button>
+            </h5>
+        </div>
+        <div class="collapse" id="collapseFiltro">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label id="#" class="form-label">#:</label>
+                        <input type="number" class="form-control cajaNumerico" placeholder="#" data-index="1" id="#" pattern="#">
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="#" class="form-label">#:</label>
+                            <input type="text" class="form-control" placeholder="#" data-index="3" id="#">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="d-flex m-3">
         <div class="ms-auto d-flex">
             <div class="ps-4">
@@ -19,7 +45,6 @@
                 <table id="tblListCajachica" class="table table-flush table-hover" width="100%">
                     <thead class="thead-light">
                         <tr>
-                            <th>#</th>
                             <th>Fecha</th>
                             <th>Hora</th>
                             <th>Descripción</th>
@@ -177,7 +202,7 @@
                                 <div class="row">
                                     <div class="form-group">
                                         <label class="form-label">Imagen:</label>
-                                        <img id="img" src="" alt="Imagen de Caja Chica" class="img-fluid" />
+                                        <img id="imgCajachica" src="" alt="Imagen de Caja Chica" class="img-fluid" />
                                     </div>
                                 </div>
                             </div>

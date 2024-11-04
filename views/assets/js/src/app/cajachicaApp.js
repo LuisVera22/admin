@@ -1,4 +1,4 @@
-const cajachicaModel = new cajaChicaModel();
-const cajachicaController = new cajaChicaController(cajachicaModel,null);
-const cajachicaView = new cajaChicaView(cajachicaController);
+const cajachicaModel = new CajachicaModel();
+const cajachicaController = new CajachicaController(cajachicaModel, null);
+const cajachicaView = new CajachicaView(cajachicaController);
 cajachicaController.view = cajachicaView;

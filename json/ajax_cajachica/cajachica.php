@@ -15,7 +15,19 @@ class CajachicaAjax
                 $mimetype = $file['type'];
 
                 if($mimetype == 'image/jpg' || $mimetype == 'image/jpeg' || $mimetype == 'image/png'){
-                    $response = CajachicaController::guardarCajaChica();
+                    $cajachica =  new CajachicaModel(null,$descripcion,$monto);
+
+                    $respCajachica = CajachicaController::guardarCajaChica($cajachica,$file);
+                    
+                    if (!isset($respCajachica)) {
+                        $response = array('responseJson' => "no server");
+                    } else {
+                        if (isset($respProveedor['message'])) {
+                            $response = $respCajachica;
+                        } else {
+                            $response = $respCajachica;
+                        }
+                    }
                 } else {
                     $response = array('reponseJson' => 'no imagen');
                 }
@@ -48,19 +60,15 @@ class CajachicaAjax
             if(!isset($respCajachica)){
                 $response = array('responseJson'=>"no server");
             } else {
-                if ($respCajachica['status']) {
-                    $response = array(
-                        "id"            => Openssl::encriptar($respCajachica['data']['id'], $_ENV['SECRET_KEY']),
-                        "date"          => $respCajachica['data']['date'],
-                        "time"          => $respCajachica['data']['time'],
-                        "description"   => $respCajachica['data']['description'],
-                        "amount"        => $respCajachica['data']['amount'],
-                        "username"      => $respCajachica['data']['username'],
-                        "img_petty_cash_name" => $respCajachica['data']['img_petty_cash_name']
-                    );
-                } else {
-                    $response = $respCajachica;
-                }
+                $response = array(
+                    "id"            => Openssl::encriptar($respCajachica['data']['id'], $_ENV['SECRET_KEY']),
+                    "date"          => $respCajachica['data']['date'],
+                    "time"          => $respCajachica['data']['time'],
+                    "description"   => $respCajachica['data']['description'],
+                    "amount"        => $respCajachica['data']['amount'],
+                    "username"      => $respCajachica['data']['username'],
+                    "img_petty_cash_name" => $respCajachica['data']['img_petty_cash_name']
+                );
             }
         } else if (isset($_POST['crud']) && $_POST['crud'] == "delete") {
             $param = Openssl::desencriptar($_POST['param'], $_ENV['SECRET_KEY']);
@@ -74,8 +82,6 @@ class CajachicaAjax
                     $response = $respCajachica;
                 }
             }
-        } else if (isset($_POST['crud']) && $_POST['crud'] == 'getCajachica') {
-            $response = CajachicaController::mostrarCajachica();
         } else {
             $response = array('responseJson' => "error");
         }

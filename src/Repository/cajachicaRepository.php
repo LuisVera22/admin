@@ -17,7 +17,7 @@ class CajachicaRepository implements CajachicaInterface
 
     static public function guardarCajachica(CajachicaModel $cajachica, $file)
     {
-        return $cajachica->postCajachica();
+        return $cajachica->postCajachica($file);
     }
 
     static public function actualizarCajachica(CajachicaModel $cajachica)

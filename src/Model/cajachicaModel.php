@@ -11,19 +11,18 @@ class CajachicaModel
     private $amount;
     private $img_petty_cash_name;
 
-    public function __construct($id = null, $description = null, $amount = null, $img_petty_cash_name = null) {
+    public function __construct($id, $description, $amount) {
         $this->id = $id;
         $this->description = $description;
         $this->amount = $amount;
-        $this->img_petty_cash_name = $img_petty_cash_name;
     }
 
     static public function getCajachica()
     {
         $curl = curl_init();
-        $url = $_ENV['URL'];
-        curl_setopt_array($curl,array(
-            CURLOPT_URL => $url.'pettycash',
+        $url   = $_ENV['URL'];
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $url . 'pettycash',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
@@ -33,18 +32,18 @@ class CajachicaModel
             CURLOPT_CUSTOMREQUEST => 'GET',
             CURLOPT_HTTPHEADER => array(
                 'Accept: application/json',
-                'Authorization: Bearer'.$_SESSION['token']
+                'Authorization: Bearer ' . $_SESSION['token']
             ),
         ));
 
         $err = curl_error($curl);
-        if($err){
+        if ($err) {
             return $response = array(
-                'responseJson' => 'not found URL'
+                'responseJson' => 'not fount URL'
             );
         } else {
             $response = curl_exec($curl);
-            $responseArray = json_decode($response,true);
+            $responseArray = json_decode($response, true);
             return $responseArray;
         }
         curl_close($curl);
@@ -53,9 +52,9 @@ class CajachicaModel
     static public function getCajachicaId($param)
     {
         $curl = curl_init();
-        $url = $_ENV['URL'];
-        curl_setopt_array($curl,array(
-            CURLOPT_URL => $url.'pettycash/'.$param,
+        $url   = $_ENV['URL'];
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $url . 'pettycash/' . $param,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
@@ -65,24 +64,24 @@ class CajachicaModel
             CURLOPT_CUSTOMREQUEST => 'GET',
             CURLOPT_HTTPHEADER => array(
                 'Accept: application/json',
-                'Authorization: Bearer'.$_SESSION['token']
+                'Authorization: Bearer ' . $_SESSION['token']
             ),
         ));
 
         $err = curl_error($curl);
-        if($err){
+        if ($err) {
             return $response = array(
-               'responseJson' => 'not fount URL' 
+                'responseJson' => 'not fount URL'
             );
         } else {
             $response = curl_exec($curl);
-            $responseArray = json_decode($response,true);
+            $responseArray = json_decode($response, true);
             return $responseArray;
         }
         curl_close($curl);
     }
 
-    public function postCajachica()
+    public function postCajachica($file)
     {
         $arrayResponse = array(
             'date'          => date('Y-m-d'),
@@ -90,8 +89,9 @@ class CajachicaModel
             'description'   => mb_strtoupper($this->description,'UTF-8'),
             'amount'        => $this->amount,
             'username'      => $_SESSION['username']??'defaultuser',
-            'img_petty_cash_name' => $this->img_petty_cash_name ? base64_encode(file_get_contents($this->img_petty_cash_name)) : null
-       );
+            'img_petty_cash_name' => $file['name'],
+            'img_petty_cash' => base64_encode(file_get_contents($file['tmp_name']))
+        );
 
         $curl = curl_init();
         $url = $_ENV['URL'];

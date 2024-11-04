@@ -40,6 +40,7 @@ if (isset($_SESSION['token'])) {
 				$_GET['ruta'] == "roles" ||
 				$_GET['ruta'] == "sedes" ||
 				$_GET['ruta'] == "documentos-sunat" ||
+				$_GET['ruta'] == "caja-chica" ||
 				$_GET['ruta'] == "logout"
 			) {
 				include_once "views/modulos/" . $_GET['ruta'] . ".php";
@@ -54,8 +55,6 @@ if (isset($_SESSION['token'])) {
 	if (isset($ruta)) {
 		if (
 			$ruta == "login" ||
-			
-			$_GET['ruta'] == "caja-chica" ||
 			$ruta == "cambiar-contraseña"
 		) {
 			include_once "views/modulos/" . $ruta . ".php";

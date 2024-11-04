@@ -11,14 +11,14 @@ class CajachicaController {
     onCreateCajachicaFormSubmit() {
         const $datos = this.view.formRegistrarCajachica.serialize();
         const self = this;
-        $datos.ajax({
+        $.ajax({
             url: 'json/ajax_cajachica/cajachica.php',
             type: 'post',
-            data: $datos + '&crud-create',
+            data: $datos + '&crud=create',
             dataType: 'json',
             beforeSend: function(){
                 $("#frmRegistrarCajachica #spinnerButton").show();
-                $("#frmRegistrarCajachica #btnCliente").attr("disabled",true);
+                $("#frmRegistrarCajachica #btnCajachica").attr("disabled",true);
             },
             success: function(e) {
                 if(e.responseJson == "no server") {
@@ -460,11 +460,12 @@ class CajachicaController {
                 { responsivePriority: 2, targets: -1 }
             ],
             columns: [
-                {'data': 'id'},
                 {'data': 'date'},
                 {'data': 'time'},
                 {'data': 'description'},
-                {'data': 'amount'}
+                {'data': 'amount'},
+                {'data': 'username'},
+                {'data': 'acciones'}
             ]
         });
     }
