@@ -83,20 +83,26 @@ class CajachicaModel
 
     public function postCajachica($file)
     {
+        $description = $this->description;
+        $amount = $this->amount;
+
+        $img_petty_cash_name = $file['name'];
+        $img_petty_cash = base64_encode(file_get_contents($file['tmp_name']));
+
         $arrayResponse = array(
-            'date'          => date('Y-m-d'),
-            'time'          => date('H:i:s'),
-            'description'   => mb_strtoupper($this->description,'UTF-8'),
-            'amount'        => $this->amount,
-            'username'      => $_SESSION['username']??'defaultuser',
-            'img_petty_cash_name' => $file['name'],
-            'img_petty_cash' => base64_encode(file_get_contents($file['tmp_name']))
+            'date' => date('Y-m-d'),
+            'time' => date('H:i:s'),
+            'description' => mb_strtoupper($description, 'UTF-8'),
+            'amount' => $amount,
+            'username' => $_SESSION['name'],
+            'img_petty_cash_name' => $img_petty_cash_name,
+            'img_petty_cash' => $img_petty_cash
         );
 
         $curl = curl_init();
         $url = $_ENV['URL'];
         curl_setopt_array($curl, array(
-            CURLOPT_URL => $url.'pettycash',
+            CURLOPT_URL => $url . 'pettycash',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
@@ -108,32 +114,38 @@ class CajachicaModel
             CURLOPT_HTTPHEADER => array(
                 'Content-Type: application/json',
                 'Accept: application/json',
-                'Authorization: Bearer' . $_SESSION['token']
+                'Authorization: Bearer ' . $_SESSION['token']
             ),
         ));
 
         $err = curl_error($curl);
-        if($err){
-            return $response = array(
-                'responseJson' => 'not found URL'
-            );
+        if ($err) {
+            return array('responseJson' => 'not found URL');
         } else {
             $response = curl_exec($curl);
             $responseArray = json_decode($response, true);
             return $responseArray;
         }
-        curl_close($curl);
+
     }
 
-    public function putCajachica(){
-        $arrayResponse = array(
-            'description'=> mb_strtoupper($this->description,'UTF-8'),
-            'amount' => $this->amount,
-        );
+    public function putCajachica($file, $imgpettycashname){
+        
 
-        if ($this->img_petty_cash_name) {
-            $arrayResponse['img_petty_cash_name'] = base64_encode(file_get_contents($this->img_petty_cash_name));
+        if (isset($file['name'])){
+            $img_petty_cash_name = $file['name'];
+            $img_petty_cash = base64_encode(file_get_contents($file['tmp_name']));
+        } else {
+            $img_petty_cash_name = $imgpettycashname;
+            $img_petty_cash = null;
         }
+
+        $arrayResponse = array(
+            'description' => mb_strtoupper($this->description, 'UTF-8'),
+            'amount' => $this->amount,
+            'img_petty_cash_name' => $img_petty_cash_name,
+            'img_petty_cash' => $img_petty_cash
+        );
 
         $curl = curl_init();
         $url = $_ENV['URL'];
@@ -172,7 +184,7 @@ class CajachicaModel
         $curl = curl_init();
         $url = $_ENV['URL'];
         curl_setopt_array($curl,array(
-            CURLOPT_URL => $url.'pettycash/'.$param,
+            CURLOPT_URL => $url . 'pettycash/' . $param,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
@@ -183,7 +195,7 @@ class CajachicaModel
             CURLOPT_HTTPHEADER => array(
                 'Accept: application/json',
                 'Content-Type: application/json',
-                'Authorization: Bearer'. $_SESSION['token']
+                'Authorization: Bearer ' . $_SESSION['token']
             ),
         ));
 

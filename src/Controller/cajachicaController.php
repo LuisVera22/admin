@@ -13,8 +13,8 @@ class CajachicaController
         return  CajachicaRepository::guardarCajachica($cajachica, $file);
     }
 
-    static public function actualizarCajachica(CajachicaModel $cajachica){
-        return CajachicaRepository::actualizarCajachica($cajachica);
+    static public function actualizarCajachica(CajachicaModel $cajachica, $file, $img_petty_cash_name){
+        return CajachicaRepository::actualizarCajachica($cajachica, $file, $img_petty_cash_name);
     }
 
     static public function eliminarCajachica($param){

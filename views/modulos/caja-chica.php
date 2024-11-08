@@ -47,9 +47,9 @@
                         <tr>
                             <th>Fecha</th>
                             <th>Hora</th>
+                            <th>Usuario</th>
                             <th>Descripción</th>
-                            <th>Monto</th>
-                            <th class="text-center">Usuario</th>
+                            <th>Monto (S/.)</th>
                             <th class="text-center">Acciones</th>
                         </tr>
                     </thead>
@@ -70,27 +70,19 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="row">
-                                    <div class="col-sm">
-                                        <div class="form-group">
-                                            <label for="textDescription" class="form-label">Descripción:</label>
-                                            <textarea name="textDescription" id="textDescription" class="form-control" placeholder="Motivo del retiro de dinero" required></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="amount" class="form-label">Monto:</label>
-                                            <input type="number" class="form-control" id="amount" name="amount" placeholder="Ingrese el monto retirado" step="any" required> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="form-group">
-                                    <label for="imgCajachica" class="form-label">Subir imagen:</label>
-                                    <input type="file" class="form-control" id="imgCajachica" name="imgCajachica" accept="image/*" required>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label for="textDescription" class="form-label">Descripción:</label>
+                            <textarea name="textDescription" id="textDescription" class="form-control" placeholder="Motivo del retiro de dinero" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount" class="form-label">Monto:</label>
+                            <input type="number" class="form-control" id="amount" name="amount" placeholder="Ingrese el monto retirado" step="any" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="imgCajachica" class="form-label">Subir archivo: <br>
+                                <p class="text-secondary mb-0" style="font-size: small;">Word - PDF - Imágenes <span class="badge badge-light text-secondary p-0">(*)</span></p>
+                            </label>
+                            <input type="file" class="form-control" id="imgCajachica" name="imgCajachica" accept="image/*,.pdf,.doc,.docx" required>
                         </div>
                         <p class="text-danger mb-0" style="font-size: small;">Datos requeridos <span class="badge badge-light text-danger p-0">(*)</span></p>
                     </div>
@@ -120,27 +112,23 @@
                         <div class="modal-body">
                             <div class="row">
                                 <input class="form-control" type="hidden" name="param" id="param">
-                                <div class="col-md-6">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="textDescription" class="form-label">Descripción:</label>
-                                                <textarea name="textDescription" id="textDescription" class="form-control" placeholder="Motivo del retiro de dinero" required></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="amount" class="form-label">Monto:</label>
-                                                <input type="number" class="form-control" id="amount" name="amount" placeholder="Ingrese el monto retirado" step="any" required>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="form-group">
+                                    <label for="amount" class="form-label">Monto:</label>
+                                    <input type="number" class="form-control" id="amount" name="amount" placeholder="Ingrese el monto retirado" step="any" required>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="imgCajachica" class="form-label">Subir imagen:</label>
-                                        <input type="file" class="form-control" id="imgCajachica" name="imgCajachica" accept="image/*">
-                                    </div>
+                                <div class="form-group">
+                                    <label for="textDescription" class="form-label">Descripción:</label>
+                                    <textarea type="text" name="textDescription" id="textDescription" class="form-control" placeholder="Motivo del retiro de dinero" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="textImg" class="form-label">Archivo actual:</label>
+                                    <input type="text" class="form-control" id="textImg" name="textImg" readonly style="color:grey">
+                                </div>
+                                <div class="form-group">
+                                    <label for="newFile" class="form-label">Subir archivo nuevo: <br>
+                                        <p class="text-secondary mb-0" style="font-size: small;">Word - PDF - Imágenes <span class="badge badge-light text-secondary p-0">(*)</span></p>
+                                    </label>
+                                    <input type="file" class="form-control" id="newFile" name="newFile" accept="image/*,.pdf,.doc,.docx">
                                 </div>
                             </div>
                             <p class="text-danger mb-0" style="font-size: small;">Datos requeridos <span class="badge badge-light text-danger p-0">(*)</span></p>
@@ -160,7 +148,7 @@
     </div>
     <div>
         <div class="modal fade" id="info-modal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="agregarLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title text-uppercase fs-5" id="agregarLabel">Registro Cliente</h1>
@@ -169,43 +157,22 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="row">
-                                    <div class="form-group">
-                                        <label class="form-label">Fecha:</label>
-                                        <p id="textFecha"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label">Hora:</label>
-                                        <p id="textHora"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label">Usuario:</label>
-                                        <p id="textUsuario"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="row">
-                                    <div class="form-group">
-                                        <label class="form-label">Monto:</label>
-                                        <p id="textMonto"></p>
-                                    </di>
-                                    <div class="form-group">
-                                        <label class="form-label">Descripción:</label>
-                                        <p id="textDescripcion"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="row">
-                                    <div class="form-group">
-                                        <label class="form-label">Imagen:</label>
-                                        <img id="imgCajachica" src="" alt="Imagen de Caja Chica" class="img-fluid" />
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label class="form-label">Fecha:</label>
+                            <p id="textFechaHora"></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Descripción:</label>
+                            <p id="textDescripcion"></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Monto:</label>
+                            <p id="textMonto"></p>
+                        </div>
+                        <div class="form-group">
+                            <!-- Contenedor de vista previa de archivo -->
+                            <label class="form-label">Archivo cargado:</label>
+                            <div id="filePreview" style="width: 100%;"></div>
                         </div>
                     </div>
                     <div class="modal-footer">

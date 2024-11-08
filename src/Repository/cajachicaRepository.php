@@ -20,9 +20,9 @@ class CajachicaRepository implements CajachicaInterface
         return $cajachica->postCajachica($file);
     }
 
-    static public function actualizarCajachica(CajachicaModel $cajachica)
+    static public function actualizarCajachica(CajachicaModel $cajachica, $file, $img_petty_cash_name)
     {
-        return $cajachica->putCajachica();
+        return $cajachica->putCajachica($file, $img_petty_cash_name);
     }
 
     static public function eliminarCajachica($param)
